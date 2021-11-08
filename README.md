@@ -1,7 +1,7 @@
 # Seoul-Bike-Rental-Prediction
-It's simple. You are given a set of features extracted from the shape of the beans in images and it's required to predict the type of each bean. There are 7 bean types in this dataset.
+Can you predict the required number of bikes for rental given information about the weather and time of the day?
 About Dataset
-The dataset consists of features describing the shape of the bean and you're required to predict it's type.
+You are provided hourly rental data along with weather data. For this competition, the training set is comprised of the first 20 days of each month, while the test set is the 21th to the end of the month. You must predict the total count of bikes rented during each hour covered by the test set, using only information available prior to the rental period.
 
 File descriptions
 train.csv - the training set.
@@ -9,20 +9,17 @@ test.csv - the test set.
 sample_submission.csv - a sample submission file in the correct format
 Data fields
 ID - an ID for this instance
-Area - (A), The area of a bean zone and the number of pixels within its boundaries.
-Perimeter - (P), Bean circumference is defined as the length of its border.
-MajorAxisLength - (L), The distance between the ends of the longest line that can be drawn from a bean.
-MinorAxisLength - (l), The longest line that can be drawn from the bean while standing perpendicular to the main axis.
-AspectRatio - (K), Defines the relationship between L and l.
-Eccentricity - (Ec), Eccentricity of the ellipse having the same moments as the region.
-ConvexArea - (C), Number of pixels in the smallest convex polygon that can contain the area of a bean seed.
-EquivDiameter - (Ed), The diameter of a circle having the same area as a bean seed area.
-Extent - (Ex), The ratio of the pixels in the bounding box to the bean area.
-Solidity - (S), Also known as convexity. The ratio of the pixels in the convex shell to those found in beans.
-Roundness - (R), Calculated with the following formula: (4piA)/(P^2)
-Compactness - (CO), Measures the roundness of an object: Ed/L
-ShapeFactor1 - (SF1)
-ShapeFactor2 - (SF2)
-ShapeFactor3 - (SF3)
-ShapeFactor4 - (SF4)
-y - the class of the bean. It can be any of BARBUNYA, SIRA, HOROZ, DERMASON, CALI, BOMBAY, and SEKER.
+Date - year-month-day
+Hour - Hour of he day
+Temperature - Temperature in Celsius
+Humidity - %
+Windspeed - m/s
+Visibility - 10m
+Dew point temperature - Celsius
+Solar radiation - MJ/m2
+Rainfall - mm
+Snowfall - cm
+Seasons - Winter, Spring, Summer, Autumn
+Holiday - Holiday/No holiday
+Functional Day - NoFunc(Non Functional Hours), Fun(Functional hours)
+y - Rented Bike count (Target), Count of bikes rented at each hour
